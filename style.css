@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+#score{
+    color: white;
+    position: relative;
+    left: 23px;
+    right: 23px;
+    top: 20px;
+    border: 2px solid black;
+    padding: 8px;
+    width: 100px;
+}
+.gamecontainer{
+    background-image: url(Backgroundimg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.mario{
+    background-image: url(Mario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 158px;
+    height: 137px;
+    position: absolute;
+    bottom: 0;
+    left: 28px;
+}
+.zombie{
+    background-image: url(zombie-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 152px;
+    height: 154px;
+    position: absolute;
+    bottom: 0;
+    right: 28px;
+}
+.gameOver{
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    color: red;
+}
+.animateMario{
+    animation: mario 0.6s linear;
+}
+.zombieAnimate{
+    animation: zombieAnimate 5s linear infinite;
+}
+@keyframes mario{
+  0%{
+    bottom: 0;
+  }
+  50%{
+    bottom: 422px;
+  }
+  100%{
+    bottom: 0;
+  }
+}
+@keyframes zombieAnimate{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
